@@ -30,3 +30,10 @@ def gcd(x: int, y: int):
     """
     typer.echo(mathtools.gcd(x, y))
 
+
+@app.command()
+def lcm(x: int, y: int):
+    """
+    Least Common Denominator
+    """
+    typer.echo(mathtools.lcm(x, y))

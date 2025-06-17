@@ -7,10 +7,12 @@ authors = [
     { name = "haru996-k", email = "haru.k0414@docomo.ne.jp" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "typer>=0.16.0",
+]
 
 [project.scripts]
-zm06 = "zm06:main"
+zm06 = "zm06.main:app"
 
 [build-system]
 requires = ["hatchling"]

@@ -41,3 +41,15 @@ def is_prime(x):
         
     return True
 
+
+def num_perfect(n):
+    total = 0
+    for i in range(1, n):
+        if n % i == 0:
+            total += i
+
+    if n == total:
+        return f"{n}は完全数です。"
+    else:
+        return f"{n}は完全数ではありません。"
+

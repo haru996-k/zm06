@@ -37,3 +37,11 @@ def lcm(x: int, y: int):
     Least Common Denominator
     """
     typer.echo(mathtools.lcm(x, y))
+
+
+@app.command()
+def num_perfect(n: int):
+    """
+    Check Perfect Number
+    """
+    typer.echo(mathtools.num_perfect(n))

@@ -2,7 +2,12 @@ import datetime
 
 import typer
 
-from zm06 import mathtools
+from . import mathtools
+
+from . import demo
+
+from . import baseball
+
 
 app = typer.Typer()
 
@@ -45,3 +50,17 @@ def num_perfect(n: int):
     Check Perfect Number
     """
     typer.echo(mathtools.num_perfect(n))
+
+@app.command()
+def hello(name: str = "Haruto"):
+    typer.echo(demo.hello(name))
+
+@app.command()
+def baseball_score():
+    """
+    NPBの現在のスコアを表示
+    """
+    typer.echo(baseball.npb_scores())
+
+if __name__ == "__main__":
+    app()

@@ -9,7 +9,9 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
     "typer>=0.16.0",
-]
+    "requests",
+    "beautifulsoup4"
+    ]
 
 [project.scripts]
 zm06 = "zm06.main:app"

@@ -8,6 +8,8 @@ from . import demo
 
 from . import baseball
 
+from . import mlb as mlb_module
+
 
 app = typer.Typer()
 
@@ -61,6 +63,13 @@ def baseball_score():
     NPBの現在のスコアを表示
     """
     typer.echo(baseball.npb_scores())
+
+@app.command()
+def mlb():
+    """
+    MLBのスコアを表示
+    """
+    typer.echo(mlb_module.mlb_scores())
 
 if __name__ == "__main__":
     app()

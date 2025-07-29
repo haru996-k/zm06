@@ -65,10 +65,8 @@ def mlb_scores():
 
         away_jp = team_translation.get(away, away)
         home_jp = team_translation.get(home, home)
-
+        
         if away_score and home_score:
             result.append(f"{away_jp} {away_score} - {home_score} {home_jp}（{status}）")
-        else:
-            result.append(f"{away_jp} vs {home_jp}（{status}）")
-
+            
     return "\n".join(result)

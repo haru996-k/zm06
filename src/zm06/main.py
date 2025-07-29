@@ -58,7 +58,7 @@ def hello(name: str = "Haruto"):
     typer.echo(demo.hello(name))
 
 @app.command()
-def baseball_score():
+def npb():
     """
     NPBの現在のスコアを表示
     """

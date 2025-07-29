@@ -65,8 +65,10 @@ def mlb_scores():
 
         away_jp = team_translation.get(away, away)
         home_jp = team_translation.get(home, home)
+
+        inning = competition.get("status", {}).get("period")
         
         if away_score and home_score:
-            result.append(f"{away_jp} {away_score} - {home_score} {home_jp}（{status}）")
-            
+            result.append(f"{away_jp} {away_score} - {home_score} {home_jp}（{inning}回 / {status}）")
+
     return "\n".join(result)
